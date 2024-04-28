@@ -32,9 +32,19 @@ void MainGame::draw()
 	GLuint timeLocation = program.getUniformLocation("time");
 	glUniform1f(timeLocation, time);
 	time += 0.02;
+	/*
+		for(const rect: Rectangles){
+			rect[i].draw()
+		}
+		for(size_ti=0; i<Rectangles.size();i++){
+			if(!Rentangles.empty(){
+				Rectangles.draw()
+			}
 
+		}
+	*/
 	for (size_t i = 0; i < 12; i++) {
-		if (spriteInitialized[i]) {
+		if (PrintRectangles[i]) {
 			sprites[i].draw();
 		}
 	}
@@ -63,9 +73,9 @@ void MainGame::update()
 		Uint32 currentTime = SDL_GetTicks();
 
 		for (size_t i = 0; i < 12; i++) {
-			if (!spriteInitialized[i] && currentTime - initTime > 2000 * (i + 1)) {
+			if (!PrintRectangles[i] && currentTime - initTime > 2000 * (i + 1)) {
 				sprites[i].init(randomCoord(), randomCoord(), 0.5, 0.5);
-				spriteInitialized[i] = true;
+				PrintRectangles[i] = true;
 			}
 		}
 		draw();

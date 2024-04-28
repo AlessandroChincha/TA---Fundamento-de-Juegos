@@ -1,5 +1,7 @@
 ﻿  MainGame.cpp
 C:\Users\RedRy\OneDrive\Imágenes\AnyDesk\Motor\Motor\MainGame.cpp(34,14): warning C4305: '+=': truncamiento de 'double' a 'float'
-C:\Users\RedRy\OneDrive\Imágenes\AnyDesk\Motor\Motor\MainGame.cpp(55,67): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\RedRy\OneDrive\Imágenes\AnyDesk\Motor\Motor\MainGame.cpp(60,21): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\RedRy\OneDrive\Imágenes\AnyDesk\Motor\Motor\MainGame.cpp(65,67): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\RedRy\OneDrive\Imágenes\AnyDesk\Motor\Motor\MainGame.cpp(70,21): warning C4244: 'inicializando': conversión de 'double' a 'int'; posible pérdida de datos
+  Main.cpp
+  Generando código...
   Motor.vcxproj -> C:\Users\RedRy\OneDrive\Imágenes\AnyDesk\Motor\x64\Debug\Motor.exe
