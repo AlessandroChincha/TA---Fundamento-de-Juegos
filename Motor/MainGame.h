@@ -12,12 +12,12 @@ enum class GameState {
 class MainGame
 {
 private:
-	Sprite sprites[12];
+	Sprite sprites[20];
 	int width;
 	int height;
 	SDL_Window* window;
 	Uint32 initTime;
-	bool spriteInitialized[12];
+	bool spriteInitialized[20];
 	void init();
 	void processInput();
 	GLS_Program program;

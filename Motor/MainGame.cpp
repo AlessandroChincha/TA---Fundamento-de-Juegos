@@ -1,8 +1,7 @@
 #include "MainGame.h"
 #include "Sprite.h"
 
-MainGame::MainGame() : initTime(0), spriteInitialized{ false, false, false, false, false, false, false, false, false, false, false, false }
-{
+MainGame::MainGame() : initTime(0){
 	window = nullptr;
 	width = 800;
 	height = 600;
