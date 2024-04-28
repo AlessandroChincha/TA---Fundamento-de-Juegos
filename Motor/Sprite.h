@@ -10,7 +10,7 @@ private:
 	GLuint vboID;
 public:
 	Sprite();
-	void init(float x, float y, float width, float height);
+	void init(float x, float y, int width, int height);
 	~Sprite();
 	//
 	//void init(float x, float y, int width, int height);

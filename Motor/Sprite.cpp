@@ -14,7 +14,7 @@ Sprite::Sprite()
 {
 }
 
-void Sprite::init(float x, float y, float width, float height)
+void Sprite::init(float x, float y, int width, int height)
 {
 	this->x = x;
 	this->y = y;

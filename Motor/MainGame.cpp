@@ -42,8 +42,15 @@ void MainGame::draw()
 			}
 
 		}
+			for (auto& sprite : sprites) {
+		sprite.draw();
+	}
+		for (const auto& rect : rectangles) {
+		rect.draw();
+	}
 	*/
-	for (size_t i = 0; i < 12; i++) {
+	//Imprimir los triangulos dentro del arreglo de Sprites
+	for (size_t i = 0; i < 20; i++) {
 		if (PrintRectangles[i]) {
 			sprites[i].draw();
 		}
@@ -60,26 +67,46 @@ void MainGame::run()
 	update();
 }
 
-float randomCoord() {
+float randomCoordGenerator() {
 	std::cout << "Nuevo rectanculo generado" << endl;
 	return static_cast<float>(rand()) / static_cast<float>(RAND_MAX) * -1.0;
+	//return static_cast<float>(rand()) / static_cast<float>(RAND_MAX) * 2.0 - 1.0;
+
+	//Hacer posible que salga en posiciones positivas de la pantalla
 
 }
 void MainGame::update()
 {
-	int RandomPosition = static_cast<float>(rand() / 2) / static_cast<float>(RAND_MAX) * -1.0;
+	
+	//int RandomPosition = static_cast<float>(rand() / 2) / static_cast<float>(RAND_MAX) * -1.0;
 	while (gameState != GameState::EXIT) {
 		processInput();
 		Uint32 currentTime = SDL_GetTicks();
 
-		for (size_t i = 0; i < 12; i++) {
+		for (size_t i = 0; i < 20; i++) {
 			if (!PrintRectangles[i] && currentTime - initTime > 2000 * (i + 1)) {
-				sprites[i].init(randomCoord(), randomCoord(), 0.5, 0.5);
+				sprites[i].init(randomCoordGenerator(), randomCoordGenerator(), 1, 1);
 				PrintRectangles[i] = true;
 			}
 		}
 		draw();
 	}
+	/*
+	    while (gameState != GameState::EXIT) {
+        processInput();
+        Uint32 currentTime = SDL_GetTicks();
+
+        for (size_t i = 0; i < 20; i++) {
+            if (currentTime - initTime > 2000 * (i + 1)) {
+                Sprite newSprite;
+                newSprite.init(randomCoord(), randomCoord(), 0.5, 0.5);
+                sprites.push_back(newSprite);
+                initTime = currentTime;
+            }
+        }
+        draw();
+    }
+	*/
 }
 
 void MainGame::processInput()
