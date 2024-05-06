@@ -1,0 +1,5 @@
+﻿  MainGame.cpp
+C:\Users\RedRy\OneDrive\Imágenes\AnyDesk\Motor2\Motor\MainGame.cpp(40,14): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Users\RedRy\OneDrive\Imágenes\AnyDesk\Motor2\Motor\MainGame.cpp(88,73): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\RedRy\OneDrive\Imágenes\AnyDesk\Motor2\Motor\MainGame.cpp(88,68): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+  Motor.vcxproj -> C:\Users\RedRy\OneDrive\Imágenes\AnyDesk\Motor2\x64\Debug\Motor.exe
